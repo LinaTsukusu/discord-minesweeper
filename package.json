@@ -1,0 +1,60 @@
+{
+  "name": "discord-minesweeper",
+  "version": "1.0.0",
+  "description": "Discord MineSweeper",
+  "private": true,
+  "main": "dist/main.js",
+  "repository": "git@github.com:/LinaTsukusu/discord-minesweeper.git",
+  "author": "LinaTsukusu <lina.tsukusu@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint --fix './**/*.ts'",
+    "dev": "ts-node ./src/main.ts",
+    "build": "tsc",
+    "test": "jest",
+    "start": "node dist/main.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
+    }
+  },
+  "dependencies": {
+    "@types/shuffle-array": "^0.0.28",
+    "commander": "^2.19.0",
+    "discord.js": "^11.4.2",
+    "shuffle-array": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.21",
+    "jest": "23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-lint": "^4.5.1",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.1"
+  }
+}

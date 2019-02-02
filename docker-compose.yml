@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  minesweeper-bot:
+    image: node:11.8.0
+    environment:
+      TOKEN: BOT_TOKEN
+      CHANNEL_ID: CHANNEL
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: bash -c "yarn && yarn build && yarn start"
