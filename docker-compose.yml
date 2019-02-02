@@ -8,4 +8,4 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    entrypoint: bash -c "yarn && yarn build && yarn start"
+    entrypoint: bash -c "yarn && yarn start"
