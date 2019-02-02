@@ -1,6 +1,6 @@
 import {Client} from 'discord.js'
 import * as program from 'commander'
-import {generateGame} from '@/minesweeper'
+import {generateGame} from './minesweeper'
 
 
 const client = new Client()
