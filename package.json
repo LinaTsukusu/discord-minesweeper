@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "Discord MineSweeper",
   "private": true,
-  "main": "dist/main.js",
+  "main": "src/main.ts",
   "repository": "git@github.com:/LinaTsukusu/discord-minesweeper.git",
   "author": "LinaTsukusu <lina.tsukusu@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "tslint --fix './**/*.ts'",
-    "dev": "ts-node ./src/main.ts",
-    "build": "tsc",
-    "test": "jest",
-    "start": "node dist/main.js"
+    "start": "ts-node ./src/main.ts",
+    "test": "jest"
   },
   "files": [
     "dist",
