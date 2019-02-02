@@ -13,7 +13,12 @@ export function generateGame(width: number, height: number, bombs: number): stri
   const gameBoard = new Array<number>(width * height).fill(0)
   const bombPos = shuffle.pick([...gameBoard.keys()], {picks: bombs})
   bombPos.forEach(v => {
-    [v - width - 1, v - width, v - width + 1, v - 1, v + 1, v + width - 1, v + width, v + width + 1]
+    [-1 , 0, 1].map(r => {
+      const row = v + width * r
+      const line = [row - 1, row, row + 1]
+      return line.filter(p => Math.floor(row / width) === Math.floor(p / width))
+    })
+      .reduce((acc, val) => acc.concat(val), [])
       .filter((around) => 0 <= around && around < gameBoard.length && gameBoard[around] != -1)
       .forEach((around) => gameBoard[around]++)
     gameBoard[v] = -1
